@@ -1,11 +1,14 @@
 export type CollectionType = {
-  symbol: string;
+  floor: number;
+  floor_marketcap: number;
+  floor_marketcap_pretty: number;
+  holders: number;
+  items: number;
+  logo: string;
+  me_key: string;
+  metadata_refresh_ts: number;
   name: string;
-  description: string;
-  image: string;
-  twitter: string;
-  discord: string;
-  website: string;
-  categories: string[];
-  isBadged: boolean;
+  official_rarity: number;
+  on_sale: number;
+  url: string;
 };
