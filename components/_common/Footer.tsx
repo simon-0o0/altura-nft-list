@@ -8,7 +8,7 @@ const Footer = () => {
           Altura NFT List
         </h3>
       </div>
-      <div className="max-w-[24.25rem] flex justify-center md:justify-start">
+      <div className="md:max-w-[24.25rem] flex justify-center md:justify-start">
         <p className="text-[1rem] text-neutral75 text-center">
           Lorem ipsum dolor sit amet consectetur. Tellus netus est aliquet e rat
           quis morbi varius. Feugiat ac.
