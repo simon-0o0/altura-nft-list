@@ -21,5 +21,33 @@ export type MintsType = {
   website: string;
   description: string;
   logo: string;
-  mints: string[];
+  items: MintItemType[];
+};
+
+export type MintItemType = {
+  id: number;
+  mint: string;
+  link: string;
+  name: string;
+  description: string;
+  image: string;
+  attributes: { name: string; value: number; rarity: string }[];
+  rank: number;
+  rank_algo: string;
+};
+
+export type NftExternalMetaDataType = {
+  attributes: { trait_type: string; value: string }[];
+  collection: { name: string; family: string };
+  description: string;
+  external_url: string;
+  image: string;
+  name: string;
+  properties: {
+    category: string;
+    creators: { address: string; share: number }[];
+    files: { type: string; uri: string }[];
+  };
+  seller_fee_basis_points: number;
+  symbol: string;
 };

@@ -10,7 +10,7 @@ interface IntroProps {
 
 const Intro = ({ itemsCount, mints }: IntroProps) => {
   return (
-    <div className="flex bg-neutral500 px-[5%] items-center gap-[0.5rem] text-neutral50 py-[1rem] md:px-[10%] md:justify-between">
+    <div className="flex bg-neutral500 px-[5%] items-center gap-[0.5rem] text-neutral50 py-[1rem] md:py-[3rem] md:px-[10%] md:justify-between">
       <div className="flex flex-col gap-[1rem] sm:flex-row">
         <div className="flex gap-[1rem]">
           <div className="w-[6rem] h-[6rem]">

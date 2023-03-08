@@ -7,7 +7,7 @@ export const HOWRARE_MINTS_API =
 
 // GENERAL
 export const ITEMS_PER_PAGE = 250;
-export const MINTS_PER_PAGE = 72;
+export const MINTS_PER_PAGE = 36;
 
 // ERROR
 export const ERROR_RETRIEVE_COLLECTION_FAILED =

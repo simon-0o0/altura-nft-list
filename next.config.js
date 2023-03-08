@@ -11,6 +11,8 @@ const nextConfig = {
       "www.howrare.is",
       "media.howrare.is",
       "www.media.howrare.is",
+      "assets.kaijucards.io",
+      "www.assets.kaijucards.io",
     ],
   },
 };

@@ -20,7 +20,7 @@ const CollectionFilter = ({
       <div className="flex justify-between items-center flex-col md:flex-row gap-[1rem]">
         <p className="uppercase font-medium">{`${
           page === 0
-            ? `Top 250 collections`
+            ? `Top ${ITEMS_PER_PAGE} collections`
             : `Collections ${page * ITEMS_PER_PAGE} - ${
                 (page + 1) * ITEMS_PER_PAGE
               }`
