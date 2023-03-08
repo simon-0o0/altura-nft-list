@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CollectionType } from "utils/types";
 import { ITEMS_PER_PAGE } from "utils/constants";
+import { useRouter } from "next/router";
 
 interface CollectionsTableProps {
   itemList: CollectionType[];
@@ -9,6 +10,8 @@ interface CollectionsTableProps {
 }
 
 const CollectionsTable = ({ itemList, page }: CollectionsTableProps) => {
+  const router = useRouter();
+
   return (
     <div className="w-full">
       {itemList.length > 0 ? (
@@ -21,7 +24,12 @@ const CollectionsTable = ({ itemList, page }: CollectionsTableProps) => {
               <div className="w-[10%] pl-[1rem]">
                 <p>{page * ITEMS_PER_PAGE + i + 1}</p>
               </div>
-              <div className="w-[45%] flex gap-[0.5rem] items-center hover:cursor-pointer md:gap-[1.5rem]">
+              <div
+                className="w-[45%] flex gap-[0.5rem] items-center hover:cursor-pointer md:gap-[1.5rem]"
+                onClick={() => {
+                  router.push(`${item.url}`);
+                }}
+              >
                 <Image
                   src={`https://howrare.is${item.logo}`}
                   width={48}

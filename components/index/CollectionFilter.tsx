@@ -32,7 +32,7 @@ const CollectionFilter = ({
         />
       </div>
       {!isBottom && (
-        <div className="w-full flex h-[4.5rem] items-center mt-[1.5rem] border-b-[0.0625rem] border-neutral100 border-opacity-50">
+        <div className="w-full flex h-[4.5rem] items-center mt-[1.5rem] border-b-[0.0625rem] border-neutral100 border-opacity-50 uppercase">
           <div className="w-[10%] px-[1rem]">
             <p>#</p>
           </div>

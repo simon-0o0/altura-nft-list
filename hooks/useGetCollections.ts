@@ -8,7 +8,7 @@ export const useGetCollections = () => {
     const res = (await axios.get(HOWRARE_COLLECTIONS_API)).data;
 
     let collections: CollectionType[] = [];
-    if (!res.error) {
+    if (res.error !== "error") {
       collections = res.data;
     }
     return collections;

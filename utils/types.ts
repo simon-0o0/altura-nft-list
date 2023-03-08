@@ -12,3 +12,14 @@ export type CollectionType = {
   on_sale: number;
   url: string;
 };
+
+export type MintsType = {
+  collection: string;
+  ranking_url: string;
+  twitter: string;
+  discord: string;
+  website: string;
+  description: string;
+  logo: string;
+  mints: string[];
+};
