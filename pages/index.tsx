@@ -9,6 +9,7 @@ import { BeatLoader } from "react-spinners";
 import React, { ReactElement, useEffect, useState } from "react";
 import { ITEMS_PER_PAGE } from "utils/constants";
 import { CollectionType } from "utils/types";
+import LoadingSpinner from "@/components/_common/LoadingSpinner";
 
 const Home: NextPageWithLayout = () => {
   const [collectionsCount, setCollectionsCount] = useState(0);
@@ -70,11 +71,7 @@ const Home: NextPageWithLayout = () => {
             />
           </>
         )}
-        {isLoading && (
-          <div className="flex items-center justify-center h-[10rem]">
-            <BeatLoader size={6} color="#ffffff" />
-          </div>
-        )}
+        {isLoading && <LoadingSpinner />}
       </div>
     </div>
   );

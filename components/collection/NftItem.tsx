@@ -4,11 +4,17 @@ import { MintItemType } from "utils/types";
 
 interface NftItemProps {
   item: MintItemType;
+  onItemClick: (item: MintItemType) => void;
 }
 
-const NftItem = ({ item }: NftItemProps) => {
+const NftItem = ({ item, onItemClick }: NftItemProps) => {
   return (
-    <div className="flex flex-col items-center py-[0.5rem] rounded-[0.5rem] gap-[0.5rem] w-full bg-neutral300 hover:bg-neutral100 hover:bg-opacity-20 hover:cursor-pointer">
+    <div
+      className="flex flex-col items-center py-[0.5rem] rounded-[0.5rem] gap-[0.5rem] w-full bg-neutral300 hover:bg-neutral100 hover:bg-opacity-20 hover:cursor-pointer shadow"
+      onClick={() => {
+        onItemClick(item);
+      }}
+    >
       <div className="mx-[0.5rem] flex justify-center">
         <Image
           src={item.image}

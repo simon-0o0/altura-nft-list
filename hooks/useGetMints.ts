@@ -4,7 +4,7 @@ import { HOWRARE_MINTS_API } from "utils/constants";
 import { MintsType } from "utils/types";
 
 export const useGetMints = (collectionName: string) => {
-  return useQuery(["GET_MINTS"], async () => {
+  return useQuery(["GET_MINTS", collectionName], async () => {
     if (!collectionName) return undefined;
 
     let mints: MintsType | undefined = undefined;

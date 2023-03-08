@@ -21,3 +21,13 @@ export const rangeFormatter = (num: number, digits: number): string => {
         .replace(rx, "$1") + item.symbol
     : "0";
 };
+
+export const truncateString = (originString: string, showingLength: number) => {
+  return `${originString.substring(
+    0,
+    showingLength
+  )}...${originString.substring(
+    originString.length - showingLength,
+    originString.length
+  )}`;
+};

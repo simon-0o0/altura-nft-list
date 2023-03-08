@@ -1,4 +1,6 @@
+import GoHomeButton from "@/components/_common/GoHomeButton";
 import Layout, { NextPageWithLayout } from "@/components/_common/Layout";
+import PageLoader from "@/components/_common/PageLoader";
 import Intro from "@/components/collection/Intro";
 import MintItemsTable from "@/components/collection/MintItemsTable";
 import MintsFilter from "@/components/collection/MintsFilter";
@@ -50,6 +52,17 @@ const Collection: NextPageWithLayout = () => {
           <MintsFilter page={page} totalPages={totalPages} setPage={setPage} />
         </>
       )}
+      {!isLoading && isFetched && !data && (
+        <div className="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
+          <div className="flex flex-col items-center">
+            <p className="font-bold pb-[1rem]">
+              Something went wrong, Please try again later.
+            </p>
+            <GoHomeButton />
+          </div>
+        </div>
+      )}
+      {isLoading && <PageLoader loading={true} />}
     </div>
   );
 };

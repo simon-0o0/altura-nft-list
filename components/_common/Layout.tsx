@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         <meta name="description" content="Altura NFT list" />
       </Head>
       <Header />
-      <main className="overflow-hidden w-full bg-neutral400 pt-[5rem]">
+      <main className="overflow-hidden w-full bg-neutral400 pt-[5rem] relative">
         {children}
       </main>
       <Footer />
