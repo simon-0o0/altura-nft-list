@@ -5,16 +5,19 @@ import NftItemDetailsDialog from "../_common/NftItemDetailsDialog";
 
 interface MintItemsTableProps {
   mintItemList: MintItemType[];
+  ownerList: Record<string, string>;
 }
 
-const MintItemsTable = ({ mintItemList }: MintItemsTableProps) => {
+const MintItemsTable = ({ mintItemList, ownerList }: MintItemsTableProps) => {
   const [isNftDetailsDialogShow, setIsNftDetailsDialogShow] = useState(false);
   const [dialogTitle, setDialogTitle] = useState("");
   const [mint, setMint] = useState("");
+  const [owner, setOwner] = useState("");
 
   const handleClickItem = (mintItem: MintItemType) => {
     setMint(mintItem.mint);
     setDialogTitle(mintItem.name);
+    if (ownerList[mintItem.mint]) setOwner(ownerList[mintItem.mint]);
     setIsNftDetailsDialogShow(true);
   };
 
@@ -36,6 +39,7 @@ const MintItemsTable = ({ mintItemList }: MintItemsTableProps) => {
         setIsShow={setIsNftDetailsDialogShow}
         title={dialogTitle}
         mint={mint}
+        owner={owner}
       />
     </>
   );

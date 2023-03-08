@@ -46,7 +46,10 @@ const Collection: NextPageWithLayout = () => {
           <MintsFilter page={page} totalPages={totalPages} setPage={setPage} />
           <div className="w-full px-[5%] md:px-[10%]">
             {isFetched && mintItemList && mintItemList.length > 0 && (
-              <MintItemsTable mintItemList={mintItemList} />
+              <MintItemsTable
+                mintItemList={mintItemList}
+                ownerList={data.owners}
+              />
             )}
           </div>
           <MintsFilter page={page} totalPages={totalPages} setPage={setPage} />

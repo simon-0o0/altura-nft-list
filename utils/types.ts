@@ -22,6 +22,7 @@ export type MintsType = {
   description: string;
   logo: string;
   items: MintItemType[];
+  owners: Record<string, string>;
 };
 
 export type MintItemType = {

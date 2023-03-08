@@ -13,6 +13,7 @@ interface NftItemDetailsDialogProps {
   isShow: boolean;
   title: string;
   mint: string;
+  owner: string;
   setIsShow: Dispatch<SetStateAction<boolean>>;
 }
 
@@ -30,6 +31,7 @@ const NftItemDetailsDialog = ({
   isShow,
   title,
   mint,
+  owner,
   setIsShow,
 }: NftItemDetailsDialogProps) => {
   const { data, isFetched, isLoading } = useGetParsedMint(mint);
@@ -109,6 +111,18 @@ const NftItemDetailsDialog = ({
                               </p>
                             </CopyToClipboard>
                           </div>
+                          {owner !== "" && (
+                            <div className="flex text-[0.75rem] gap-[0.5rem]">
+                              <h4 className="text-yellow300 font-bold">
+                                Owner:{" "}
+                              </h4>
+                              <CopyToClipboard text={owner}>
+                                <p className="text-neutral100 font-medium hover:text-neutral50">
+                                  {truncateString(owner, 6)}
+                                </p>
+                              </CopyToClipboard>
+                            </div>
+                          )}
                         </div>
                         <div className="flex flex-col items-start">
                           <h4 className="text-yellow300 font-medium">
