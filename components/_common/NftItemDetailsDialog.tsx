@@ -6,7 +6,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { truncateString } from "utils/helper";
 import CopyToClipboard from "./CopyToClipboard";
 import Link from "next/link";
-import { ME_DETAIL_BASE_URI } from "utils/constants";
+import { ME_DETAIL_BASE_URI, OS_DETAIL_BASE_URI } from "utils/constants";
 import LoadingSpinner from "./LoadingSpinner";
 
 interface NftItemDetailsDialogProps {
@@ -155,7 +155,7 @@ const NftItemDetailsDialog = ({
                           />
                           <OutLinkButton
                             text="OpenSea"
-                            link={`${ME_DETAIL_BASE_URI}${data.metadata.mint.toBase58()}`}
+                            link={`${OS_DETAIL_BASE_URI}${data.metadata.mint.toBase58()}`}
                           />
                         </div>
                       </div>
